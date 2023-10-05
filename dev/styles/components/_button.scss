@@ -1,0 +1,16 @@
+.button {
+  display: block;
+  width: 184px;
+  height: 147px;
+  padding: 12px 25px 39px;
+  background-image: url('../images/gui/button-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  transition: background-image 0.15s ease;
+
+  &:hover {
+    background-image: url('../images/gui/button-hover-background.png');
+  }
+}
