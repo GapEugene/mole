@@ -2,9 +2,15 @@
 
   <div class="bar bar_top-left">
     <img class="bar__background-image bar__background-image_top-left" src="./assets/images/gui/bar-background.png" alt="">
-    <button class="button" type="button"></button>
-    <button class="button" type="button"></button>
-    <button class="button" type="button"></button>
+    <button class="button" type="button">
+      @@include('../svg/triple-dot.html', { class: 'button__icon' })
+    </button>
+    <button class="button" type="button">
+      @@include('../svg/house.html', { class: 'button__icon' })
+    </button>
+    <button class="button" type="button">
+      @@include('../svg/speaker.html', { class: 'button__icon' })
+    </button>
   </div>
   <div class="bar bar_top-right">
     <img class="bar__background-image bar__background-image_top-right" src="./assets/images/gui/bar-background.png" alt="">

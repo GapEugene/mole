@@ -1,5 +1,5 @@
 .button {
-  display: block;
+  display: flex;
   width: 184px;
   height: 147px;
   padding: 12px 25px 39px;
@@ -12,5 +12,12 @@
 
   &:hover {
     background-image: url('../images/gui/button-hover-background.png');
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    fill: #ace8ff;
   }
 }
