@@ -1,0 +1,36 @@
+.coins {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  padding: 12px 25px;
+
+  &__media {
+    width: 74px;
+    height: 74px;
+    margin-block: auto;
+  }
+
+  &__text {
+    width: calc(100% - 94px);
+    margin-block: auto;
+  }
+
+  &__image {
+    width: 74px;
+    height: 74px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 48px;
+    color: #adbbc2;
+  }
+
+  &__value {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 48px;
+    color: #ffffff;
+  }
+}

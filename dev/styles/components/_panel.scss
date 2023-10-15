@@ -1,0 +1,38 @@
+.panel {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 547px);
+  z-index: 0;
+  display: flex;
+  width: $panel-width;
+  height: $panel-height;
+  padding: 50px 265px 52px;
+  pointer-events: none;
+  user-select: none;
+
+  @include responsive-scale-gui;
+  @include responsive-position-gui(null, bottom, $panel-width, $panel-height);
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 0;
+    margin: auto;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56px;
+    color: #bcfffa;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px #bcfffa;
+  }
+}

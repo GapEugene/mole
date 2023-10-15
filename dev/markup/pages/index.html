@@ -1,25 +1,4 @@
 @@include('../layout/header.html')
-
-  <div class="bar bar_top-left">
-    <img class="bar__background-image bar__background-image_top-left" src="./assets/images/gui/bar-background.png" alt="">
-    <button class="button" type="button">
-      @@include('../svg/triple-dot.html', { class: 'button__icon' })
-    </button>
-    <button class="button" type="button">
-      @@include('../svg/house.html', { class: 'button__icon' })
-    </button>
-    <button class="button" type="button">
-      @@include('../svg/speaker.html', { class: 'button__icon' })
-    </button>
-  </div>
-  <div class="bar bar_top-right">
-    <img class="bar__background-image bar__background-image_top-right" src="./assets/images/gui/bar-background.png" alt="">
-  </div>
-  <div class="bar bar_bottom-left">
-    <img class="bar__background-image bar__background-image_bottom-left" src="./assets/images/gui/bar-background.png" alt="">
-  </div>
-  <div class="bar bar_bottom-right">
-    <img class="bar__background-image bar__background-image_bottom-right" src="./assets/images/gui/bar-background.png" alt="">
-  </div>
-
+@@include('../layout/bars/index.html')
+@@include('../layout/panel.html')
 @@include('../layout/footer.html')

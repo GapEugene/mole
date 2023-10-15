@@ -1,27 +1,27 @@
-$width-xl: 1440px;
-$width-lg: 1280px;
-$width-md: 960px;
-$width-sm: 640px;
-$width-xs: 480px;
-
-$height-xl: 1080px;
-$height-lg: 920px;
-$height-md: 760px;
-$height-sm: 600px;
-$height-xs: 440px;
-
 $width-resolutions: (
-  'xl': 1440px,
-  'lg': 1280px,
-  'md': 960px,
-  'sm': 640px,
-  'xs': 480px,
+  2080px,
+  1920px,
+  1760px,
+  1600px,
+  1440px,
+  1280px,
+  1120px,
+  960px,
+  800px,
+  640px,
+  480px,
 );
 
 $height-resolutions: (
-  'xl': 1080px,
-  'lg': 920px,
-  'md': 760px,
-  'sm': 600px,
-  'xs': 440px,
+  1160px,
+  1080px,
+  1000px,
+  920px,
+  840px,
+  760px,
+  680px,
+  600px,
+  520px,
+  440px,
+  360px,
 );

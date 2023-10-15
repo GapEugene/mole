@@ -3,28 +3,58 @@
   z-index: 10;
   display: flex;
   flex-wrap: wrap;
-  width: 630px;
-  height: 207px;
+  width: $bar-width;
+  height: $bar-height;
   pointer-events: none;
+  user-select: none;
+
+  @include responsive-scale-gui;
 
   &_top-left {
     top: 0;
     left: 0;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(3, 134px);
+    padding-right: 152px;
+    padding-bottom: 54px;
+
+    @include responsive-position-gui(left, top, $bar-width, $bar-height);
   }
 
   &_top-right {
     top: 0;
     right: 0;
+    padding-left: 152px;
+    padding-bottom: 54px;
+
+    @include responsive-position-gui(right, top, $bar-width, $bar-height);
+
+    .profile {
+      margin-left: auto;
+    }
   }
 
   &_bottom-left {
     bottom: 0;
     left: 0;
+    padding-right: 152px;
+    padding-top: 54px;
+
+    @include responsive-position-gui(left, bottom, $bar-width, $bar-height);
   }
 
   &_bottom-right {
     bottom: 0;
     right: 0;
+    padding-left: 152px;  
+    padding-top: 54px;
+
+    @include responsive-position-gui(right, bottom, $bar-width, $bar-height);
+
+    .coins {
+      margin-left: auto;
+    }
   }
 
   &__background-image {
@@ -37,7 +67,6 @@
     object-fit: cover;
     object-position: center;
     pointer-events: none;
-    user-select: none;
 
     &_top-left {
       transform: none;
@@ -53,6 +82,28 @@
 
     &_bottom-right {
       transform: scale(-1);
+    }
+  }
+
+  &__background-decoration {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: calc(100% - 54px);
+    object-fit: contain;
+    object-position: left;
+    pointer-events: none;
+
+    &_bottom-left {
+      top: 54px;
+      left: 0;
+      transform: none;
+    }
+
+    &_bottom-right {
+      top: 54px;
+      right: 0;
+      transform: scaleX(-1);
     }
   }
 

@@ -1,0 +1,9 @@
+@mixin responsive-scale-gui {
+  @each $width-resolution in $width-resolutions {
+    @media (max-width: $width-resolution) {
+      transform: scale($gui-initial-scale);
+    }
+
+    $gui-initial-scale: $gui-initial-scale - $gui-step-scale;
+  }
+}

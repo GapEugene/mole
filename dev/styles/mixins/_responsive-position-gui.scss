@@ -1,0 +1,15 @@
+@mixin responsive-position-gui($property-x, $property-y, $bar-width, $bar-height) {
+  @each $width-resolution in $width-resolutions {
+    $shift-x: - ($bar-width - $bar-width * $gui-initial-scale) / 2;
+    $shift-y: - ($bar-height - $bar-height * $gui-initial-scale) / 2;
+
+    @media (max-width: $width-resolution) {
+      @if $property-x {
+        #{$property-x}: $shift-x;
+      }
+      #{$property-y}: $shift-y;
+    }
+
+    $gui-initial-scale: $gui-initial-scale - $gui-step-scale;
+  }
+}

@@ -1,0 +1,22 @@
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  padding: 12px 25px;
+
+  &__image {
+    width: 115px;
+    height: 115px;
+    margin-block: auto;
+    border-radius: 50%;
+  }
+
+  &__name {
+    max-width: calc(100% - 135px);
+    margin-block: auto;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #ffffff;
+  }
+}

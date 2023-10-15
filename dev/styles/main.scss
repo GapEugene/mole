@@ -1,12 +1,17 @@
 @import './variables/typography';
 @import './variables/colors';
 @import './variables/resolutions';
+@import './variables/gui';
 
-@import './mixins/breakpoints';
+@import './mixins/responsive-scale-gui';
+@import './mixins/responsive-position-gui';
 
 @import './components/wrapper';
 @import './components/bar';
+@import './components/panel';
 @import './components/button';
+@import './components/profile';
+@import './components/coins';
 
 @import './basic/fonts';
 @import './basic/reset';
