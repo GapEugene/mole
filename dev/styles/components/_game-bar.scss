@@ -1,0 +1,87 @@
+.game-bar {
+  position: absolute;
+  right: 0;
+  bottom: 227px;
+  z-index: 0;
+  width: $game-bar-width;
+  height: $game-bar-height;
+  pointer-events: none;
+  user-select: none;
+
+  @include responsive-scale-gui;
+  @include responsive-position-gui(right, null, $game-bar-width, $game-bar-height);
+
+  &__background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__info {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 160px;
+  }
+
+  &__icon {
+    width: 49px;
+    height: 70px;
+    margin-inline: auto;
+    fill: #56ddff;
+  }
+
+  &__text {
+    &-value {
+      display: block;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 30px;
+      color: #56ddff;
+      text-align: center;
+    }
+
+    &-currency {
+      display: block;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 30px;
+      color: #56ddff;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    bottom: 44px;
+    right: 6px;
+    z-index: 0;
+    display: block;
+    width: 282px;
+    height: 252px;
+    background-image: url('../images/gui/game-bar-button-background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 48px;
+    color: #ffffff;
+    pointer-events: initial;
+    cursor: pointer;
+    transition: background-image 0.15s ease;
+
+    &:hover {
+      background-image: url('../images/gui/game-bar-button-hover-background.png');
+    }
+  }
+}
