@@ -2,9 +2,11 @@
 @import './variables/colors';
 @import './variables/resolutions';
 @import './variables/gui';
+@import './variables/field';
 
 @import './mixins/responsive-scale-gui';
 @import './mixins/responsive-position-gui';
+@import './mixins/non-interactive';
 
 @import './components/wrapper';
 @import './components/bar';
@@ -13,6 +15,8 @@
 @import './components/button';
 @import './components/profile';
 @import './components/coins';
+@import './components/scene';
+@import './components/field';
 
 @import './basic/fonts';
 @import './basic/reset';

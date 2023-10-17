@@ -1,13 +1,12 @@
 .game-bar {
   position: absolute;
   right: 0;
-  bottom: 227px;
-  z-index: 0;
+  top: calc(50% - #{$game-bar-height / 2});
+  z-index: 10;
   width: $game-bar-width;
   height: $game-bar-height;
-  pointer-events: none;
-  user-select: none;
 
+  @include non-interactive;
   @include responsive-scale-gui;
   @include responsive-position-gui(right, null, $game-bar-width, $game-bar-height);
 

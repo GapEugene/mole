@@ -1,0 +1,28 @@
+.field {
+  position: absolute;
+  top: 14.44vw;
+  left: 38.99vw;
+  transform: skew(-63.4deg, 26.3deg);
+  z-index: 0;
+  display: grid;
+  grid-template-rows: repeat(13, $cell-height);
+  width: $field-width;
+  height: $field-height;
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, $cell-width);
+  }
+
+  &__cell {
+    width: $cell-width;
+    height: $cell-height;
+    user-select: none;
+    
+    &-background-image {
+      width: 100%;
+      height: 100%;
+      @include non-interactive;
+    }
+  }
+}

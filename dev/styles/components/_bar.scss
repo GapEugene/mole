@@ -5,9 +5,8 @@
   flex-wrap: wrap;
   width: $bar-width;
   height: $bar-height;
-  pointer-events: none;
-  user-select: none;
 
+  @include non-interactive;
   @include responsive-scale-gui;
 
   &_top-left {

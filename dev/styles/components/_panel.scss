@@ -2,14 +2,13 @@
   position: absolute;
   bottom: 0;
   left: calc(50% - 547px);
-  z-index: 0;
+  z-index: 10;
   display: flex;
   width: $panel-width;
   height: $panel-height;
   padding: 50px 265px 52px;
-  pointer-events: none;
-  user-select: none;
 
+  @include non-interactive;
   @include responsive-scale-gui;
   @include responsive-position-gui(null, bottom, $panel-width, $panel-height);
 
