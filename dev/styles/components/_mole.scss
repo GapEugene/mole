@@ -1,0 +1,10 @@
+.mole {
+  position: absolute;
+  top: $mole-initial-position-x;
+  left: $mole-initial-position-y;
+  transform: scaleX(-1) translate(-15px,-50%);
+  z-index: 10;
+  width: $mole-width;
+  height: $mole-height;
+  @include non-interactive;
+}

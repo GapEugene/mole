@@ -9,15 +9,53 @@
   width: $field-width;
   height: $field-height;
 
+  &_select {
+    .field__row:not(.field__row_active) {
+      .field__cell {
+        &::before {
+          background-color: rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+
   &__row {
     display: grid;
     grid-template-columns: repeat(5, $cell-width);
+
+    &_active {
+      .field__cell {
+        cursor: pointer;
+
+        &:hover {
+          &::before {
+            box-shadow: inset 0 0 8px 4px #2ecef6;
+          }
+        }
+      }
+    }
   }
 
   &__cell {
+    position: relative;
+    z-index: 0;
     width: $cell-width;
     height: $cell-height;
     user-select: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      transition: background-color 0.3s ease,
+                  box-shadow 0.3s ease;
+
+      @include non-interactive;
+    }
     
     &-background-image {
       width: 100%;

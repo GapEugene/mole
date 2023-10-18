@@ -3,6 +3,7 @@
 @import './variables/resolutions';
 @import './variables/gui';
 @import './variables/field';
+@import './variables/mole';
 
 @import './mixins/responsive-scale-gui';
 @import './mixins/responsive-position-gui';
@@ -17,6 +18,7 @@
 @import './components/coins';
 @import './components/scene';
 @import './components/field';
+@import './components/mole';
 
 @import './basic/fonts';
 @import './basic/reset';
