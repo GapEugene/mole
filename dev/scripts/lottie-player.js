@@ -1,3 +1,5 @@
+const lottiePlayer = document.getElementById('lottie-player');
+
 LottieInteractivity.create({
-  player: '#lottie-player',
+  player: lottiePlayer,
 });

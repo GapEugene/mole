@@ -36,6 +36,7 @@ gameButton.onclick = (event) => {
       state.rowNumber = 1;
       setGameButton(PLAY);
       setMoleInitialPosition();
+      removeMines();
       break;
   }
 };
