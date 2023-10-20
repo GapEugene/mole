@@ -6,12 +6,14 @@ const selectCell = () => {
       disableRow();
 
       const cell = event.target;
+      const cellMinedId = `cell-${state.holes[state.rowNumber - 1]}`;
 
+      state.cell = cell;
+      state.cellMinedId = cellMinedId;
       state.x = getVwCoords(Math.round(cell.getBoundingClientRect().left) + scene.scrollLeft);
       state.y = getVwCoords(Math.round(cell.getBoundingClientRect().top) + scene.scrollTop);
 
       moveMole();
-      dropMine(cell);
     }
   };
 };
@@ -21,5 +23,17 @@ const removeMines = () => {
 
   mines.forEach((mine) => {
     mine.remove();
+  });
+};
+
+const getCellBackgroundImage = () => {
+  return state.cell.querySelector('.field__cell-background-image');
+};
+
+const resetCellBackgroundImage = () => {
+  const images = document.querySelectorAll('[src*="tile-hole"]');
+
+  images.forEach((image) => {
+    image.src = TILE_1_SRC;
   });
 };

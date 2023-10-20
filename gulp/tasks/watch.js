@@ -6,6 +6,7 @@ module.exports = () => {
     $.gulp.watch('./dev/libraries/**/*.js', $.gulp.series('libraries-scripts'));
     $.gulp.watch('./dev/libraries/**/*.css', $.gulp.series('libraries-styles'));
     $.gulp.watch('./dev/json/**/*.json', $.gulp.series('json-assets'));
+    $.gulp.watch('./dev/json/**/*.mp3', $.gulp.series('sounds-assets'));
     $.gulp.watch('./dev/images/**/*.{jpg,png,svg,gif,ico}', $.gulp.series('images'));
     $.gulp.watch('./dev/fonts/**/*.{woff,woff2,eot,ttf}', $.gulp.series('fonts'));
   });

@@ -1,5 +1,6 @@
 const READY_TO_PLAY = 'READY_TO_PLAY';
 const SELECT_TILE = 'SELECT_TILE';
+const GAME_OVER = 'GAME_OVER';
 const GAME_END = 'GAME_END';
 
 const MOLE_INITIAL_X = '14.07vw';
@@ -21,3 +22,10 @@ const MOLE_WIN_OUT = './assets/json/win-out.json';
 const MOLE_WIN_JUMP = './assets/json/win-jump.json';
 
 const MINE_SRC = './assets/images/level/mine.png';
+const TILE_1_SRC = './assets/images/level/tile-1.png';
+const TILE_HOLE_SRC = './assets/images/level/tile-hole.png';
+
+const WIN_SOUND_SRC = './assets/sounds/win.mp3';
+const DEATH_IDLE_SOUND_SRC = './assets/sounds/death-idle.mp3';
+const DEATH_1_SOUND_SRC = './assets/sounds/death-1.mp3';
+const DEATH_2_SOUND_SRC = './assets/sounds/death-2.mp3';

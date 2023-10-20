@@ -24,6 +24,7 @@ $.gulp.task('default', $.gulp.series(
     'libraries-scripts',
     'libraries-styles',
     'json-assets',
+    'sounds-assets',
     'images',
     'fonts',
   ),
