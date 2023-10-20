@@ -15,6 +15,7 @@ gameButton.onclick = (event) => {
   switch (state.flow) {
     case READY_TO_PLAY :
       state.flow = SELECT_TILE;
+
       setGameButton(COLLECT);
       clearHoles();
       setHoles();
@@ -27,6 +28,7 @@ gameButton.onclick = (event) => {
     case SELECT_TILE :
       state.flow = READY_TO_PLAY;
       state.rowNumber = 1;
+
       disableField();
       disableRow();
       setGameButton(PLAY);
@@ -38,23 +40,26 @@ gameButton.onclick = (event) => {
     case GAME_END :
       state.flow = READY_TO_PLAY;
       state.rowNumber = 1;
+      state.cellMinedId = null;
+
       setGameButton(PLAY);
       setMoleInitialPosition();
+      resetCellBackgroundImage();
       removeMines();
-      state.cellMinedId = null;
 
       break;
     
     case GAME_OVER :
       state.flow = READY_TO_PLAY;
       state.rowNumber = 1;
+      lottiePlayer.load(MOLE_IDLE);
+      lottiePlayer.setAttribute('loop', true);
+      state.cellMinedId = null;
+
       setGameButton(PLAY);
       setMoleInitialPosition();
       resetCellBackgroundImage();
       removeMines();
-      lottiePlayer.load(MOLE_IDLE);
-      lottiePlayer.setAttribute('loop', true);
-      state.cellMinedId = null;
       
       lottiePlayer.removeEventListener('complete', glitchOutMole);
       lottiePlayer.removeEventListener('complete', deathIdleMole);

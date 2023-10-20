@@ -6,6 +6,7 @@ const setMoleInitialPosition = () => {
 };
 
 const moveMole = () => {
+  lottiePlayer.setAttribute('speed', 5);
   glitchInMole();
 };
 
@@ -28,7 +29,8 @@ const glitchOutMole = () => {
   lottiePlayer.load(MOLE_GLITCH_OUT);
   lottiePlayer.removeEventListener('complete', glitchOutMole);
   lottiePlayer.addEventListener('complete', idleMole);
-  dropMine(state.cell);
+
+  if (state.cellPrevious) dropMine(state.cellPrevious);
 };
 
 const winJumpMole = () => {
@@ -39,12 +41,15 @@ const winJumpMole = () => {
 };
 
 const deathIdleMole = () => {
+  lottiePlayer.setAttribute('speed', 1);
+  
   mole.style.left = `${state.x}vw`;
   mole.style.top = `${state.y}vw`;
 
-  getCellBackgroundImage().src = TILE_HOLE_SRC;
+  getCellBackgroundImage(state.cell).src = TILE_HOLE_SRC;
   setGameButton(RESTART);
   disableField();
+  showHoles();
 
   lottiePlayer.setAttribute('loop', true);
   lottiePlayer.load(MOLE_DEATH_IDLE);
@@ -54,6 +59,7 @@ const deathIdleMole = () => {
 }
 
 const idleMole = () => {
+  lottiePlayer.setAttribute('speed', 1);
   lottiePlayer.load(MOLE_IDLE);
   lottiePlayer.removeEventListener('complete', idleMole);
   lottiePlayer.setAttribute('loop', true);
@@ -67,6 +73,7 @@ const idleMole = () => {
     setGameButton(RESTART);
     disableField();
     winJumpMole();
+    showHoles();
   }
 }
 

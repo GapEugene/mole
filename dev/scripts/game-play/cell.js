@@ -8,6 +8,10 @@ const selectCell = () => {
       const cell = event.target;
       const cellMinedId = `cell-${state.holes[state.rowNumber - 1]}`;
 
+      if (state.cell) {
+        state.cellPrevious = state.cell;
+      }
+
       state.cell = cell;
       state.cellMinedId = cellMinedId;
       state.x = getVwCoords(Math.round(cell.getBoundingClientRect().left) + scene.scrollLeft);
@@ -26,8 +30,8 @@ const removeMines = () => {
   });
 };
 
-const getCellBackgroundImage = () => {
-  return state.cell.querySelector('.field__cell-background-image');
+const getCellBackgroundImage = (cell) => {
+  return cell.querySelector('.field__cell-background-image');
 };
 
 const resetCellBackgroundImage = () => {
@@ -35,5 +39,12 @@ const resetCellBackgroundImage = () => {
 
   images.forEach((image) => {
     image.src = TILE_1_SRC;
+  });
+};
+
+const showHoles = () => {
+  state.holes.forEach((hole) => {
+    const cell = document.getElementById(`cell-${hole}`);
+    getCellBackgroundImage(cell).src = TILE_HOLE_SRC;
   });
 };
