@@ -15,6 +15,8 @@ gameButton.onclick = (event) => {
   switch (state.flow) {
     case READY_TO_PLAY :
       state.flow = SELECT_TILE;
+      state.cellPrevious = null;
+      state.cell = null;
 
       setGameButton(COLLECT);
       clearHoles();
