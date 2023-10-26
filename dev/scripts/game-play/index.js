@@ -28,14 +28,13 @@ gameButton.onclick = (event) => {
       break;
       
     case SELECT_TILE :
-      state.flow = READY_TO_PLAY;
+      state.flow = GAME_END;
       state.rowNumber = 1;
 
       disableField();
       disableRow();
-      setGameButton(PLAY);
-      setMoleInitialPosition();
-      removeMines();
+      animateMoney();
+      setGameButton(RESTART);
 
       break;
     
@@ -47,7 +46,7 @@ gameButton.onclick = (event) => {
       setGameButton(PLAY);
       setMoleInitialPosition();
       resetCellBackgroundImage();
-      removeMines();
+      disableMoneyAnimation();
 
       break;
     

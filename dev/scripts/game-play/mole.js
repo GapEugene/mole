@@ -71,6 +71,7 @@ const idleMole = () => {
   } else if (state.flow !== GAME_END) {
     state.flow = GAME_END;
     setGameButton(RESTART);
+    animateMoney();
     disableField();
     winJumpMole();
     showHoles();
