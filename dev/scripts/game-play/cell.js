@@ -92,6 +92,7 @@ const outWin = () => {
 
   fieldCellsMoney.forEach((fieldCellMoney) => {
     fieldCellMoney.removeEventListener('complete', outWin);
+    fieldCellMoney.remove();
   });
 
   removeMines();
