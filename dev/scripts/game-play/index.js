@@ -2,6 +2,7 @@
 //=require ./state.js
 
 //=require ./button.js
+//=require ./bet.js
 
 //=require ./field.js
 //=require ./row.js

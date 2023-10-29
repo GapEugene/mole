@@ -1,0 +1,124 @@
+.bet {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  @include non-interactive;
+
+  &_display {
+    display: flex;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 29, 30, 0.80);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    width: 1406px;
+    height: 466px;
+    margin-bottom: 76px;
+    padding: 80px 140px 0;
+    background-image: url('../images/gui/bet-background.png');
+    pointer-events: initial;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 62px;
+    line-height: 100%;
+    color: #ffffff;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+
+    &-button {
+      display: flex;
+      width: 230px;
+      height: 150px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      cursor: pointer;
+
+      &_decrement {
+        padding-left: 40px;
+        background-image: url('../images/gui/button-3-background.png');
+
+        .bet__selector-icon {
+          transform: scaleX(-1);
+        }
+      }
+
+      &_increment {
+        padding-right: 40px;
+        background-image: url('../images/gui/button-4-background.png');
+      }
+    }
+
+    &-icon {
+      width: 68px;
+      height: 44px;
+      margin: auto;
+      fill: #ffffff;
+    }
+
+    &-value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 420px;
+      height: 150px;
+      border-radius: 20px;
+      background-color: #181c1d;
+      font-weight: 700;
+      font-size: 86px;
+      line-height: 100%;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 470px;
+    height: 150px;
+    margin-inline: auto;
+    background-image: url('../images/gui/button-2-background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 100%;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

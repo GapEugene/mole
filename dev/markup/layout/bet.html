@@ -1,0 +1,15 @@
+<div class="bet" id="bet">
+  <div class="bet__content">
+    <p class="bet__text">Bet value</p>
+    <div class="bet__selector">
+      <button class="bet__selector-button bet__selector-button_decrement" type="button" id="bet-decrement">
+        @@include('../svg/arrow.html', { class: 'bet__selector-icon' })
+      </button>
+      <p class="bet__selector-value"><span id="bet-value">1</span>&nbsp;FUN</p>
+      <button class="bet__selector-button bet__selector-button_increment" type="button" id="bet-increment">
+        @@include('../svg/arrow.html', { class: 'bet__selector-icon' })
+      </button>
+    </div>
+    <button class="bet__button" type="button" id="bet-submit">Save</button>
+  </div>
+</div>

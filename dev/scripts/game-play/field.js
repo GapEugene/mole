@@ -19,3 +19,13 @@ const setHoles = () => {
 const clearHoles = () => {
   state.holes = [];
 };
+
+const randomizeField = () => {
+  const cellImages = document.querySelectorAll('.field__cell-background-image');
+
+  cellImages.forEach((cellImage) => {
+    cellImage.setAttribute('src', `./assets/images/level/tile-${getRandomIntFromInterval(1, 3)}.png`);
+  });
+};
+
+randomizeField();
