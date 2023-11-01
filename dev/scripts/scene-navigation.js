@@ -34,3 +34,7 @@ scene.addEventListener('mousemove', (event) => {
   scene.scrollLeft = scrollLeft - shiftX;
   scene.scrollTop = scrollTop - shiftY;
 });
+
+const targetObject = document.getElementById('mole');
+
+scene.scrollTop = targetObject.getBoundingClientRect().top - targetObject.getBoundingClientRect().height;

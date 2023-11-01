@@ -3,6 +3,11 @@ const mole = document.getElementById('mole');
 const setMoleInitialPosition = () => {
   mole.style.left = MOLE_INITIAL_X;
   mole.style.top = MOLE_INITIAL_Y;
+
+  scene.scrollBy(
+    targetObject.getBoundingClientRect().left - targetObject.getBoundingClientRect().width,
+    targetObject.getBoundingClientRect().top - targetObject.getBoundingClientRect().height
+  );
 };
 
 const moveMole = () => {
@@ -25,6 +30,11 @@ const glitchInMole = () => {
 const glitchOutMole = () => {
   mole.style.left = `${state.x}vw`;
   mole.style.top = `${state.y}vw`;
+
+  scene.scrollBy(
+    targetObject.getBoundingClientRect().left - targetObject.getBoundingClientRect().width,
+    targetObject.getBoundingClientRect().top - targetObject.getBoundingClientRect().height
+  );
 
   lottiePlayer.load(MOLE_GLITCH_OUT);
   lottiePlayer.removeEventListener('complete', glitchOutMole);

@@ -1,7 +1,7 @@
 .field {
   position: absolute;
-  top: 14.44vw;
-  left: 38.99vw;
+  top: $field-position-x;
+  left: $field-position-y;
   transform: skew(-63.4deg, 26.3deg);
   z-index: 0;
   display: grid;
@@ -41,6 +41,7 @@
       font-size: 16px;
       line-height: 100%;
       color: #abb7c1;
+      @include non-interactive;
     }
 
     &::after {

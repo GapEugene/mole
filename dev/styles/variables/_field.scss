@@ -1,5 +1,9 @@
-$cell-width: 4.84vw;
-$cell-height: 2.46vw;
+$cell-width: 4.84vw * $scale;
+$cell-height: 2.46vw * $scale;
+
+$field-position-x: 14.44vw * $scale;
+$field-position-y: 38.99vw * $scale;
+
 
 $field-width: $cell-width * 5;
 $field-height: $cell-height * 13;
