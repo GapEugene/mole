@@ -5,8 +5,8 @@ const setMoleInitialPosition = () => {
   mole.style.top = MOLE_INITIAL_Y;
 
   scene.scrollBy(
-    targetObject.getBoundingClientRect().left - targetObject.getBoundingClientRect().width,
-    targetObject.getBoundingClientRect().top - targetObject.getBoundingClientRect().height
+    targetObject.getBoundingClientRect().left - targetObject.getBoundingClientRect().width * 1.5,
+    targetObject.getBoundingClientRect().top - targetObject.getBoundingClientRect().height * 1.5
   );
 };
 
@@ -32,8 +32,8 @@ const glitchOutMole = () => {
   mole.style.top = `${state.y}vw`;
 
   scene.scrollBy(
-    targetObject.getBoundingClientRect().left - targetObject.getBoundingClientRect().width,
-    targetObject.getBoundingClientRect().top - targetObject.getBoundingClientRect().height
+    targetObject.getBoundingClientRect().left - targetObject.getBoundingClientRect().width * 1.5,
+    targetObject.getBoundingClientRect().top - targetObject.getBoundingClientRect().height * 1.5
   );
 
   lottiePlayer.load(MOLE_GLITCH_OUT);
